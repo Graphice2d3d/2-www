@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url(https://cdn.wallpaperhub.app/cloudcache/2/a/7/b/a/d/2a7bad892290ebd7e30633f935dc5158d465a1a7.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    flex: 1;
+    max-width: 320px;
+    height: 220px;
+    background-color: blue;
+    margin: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.icon{
+    font-size: 34px;
+    color: aqua;
+    transition: .3s linear;
+}
+
+.card:hover .icon{
+    transform: scale(3);
+    opacity: 0;
+}
+
+.card-content h3,
+.card-content span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    opacity: 0;
+}
+
+.card-content h3{
+    top: 22px;
+    text-transform: uppercase;
+    color: aqua;
+}
+
+.card-content span{
+    bottom: 20px;
+    color: aquamarine;
+    font-weight: 500;
+}
+
+.card:hover h3{
+    opacity: 1;
+    top: 66px;
+    transition: .3s linear .3s;
+}
+
+.card:hover span{
+    opacity: 1;
+    top: 120px;
+    transition: .3s linear .3s;
+}
+
+@media screen and (max-width:900px){
+    .card{
+        flex: 100%;
+        max-width: 500px;
+    }
+}
